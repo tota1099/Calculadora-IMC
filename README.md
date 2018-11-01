@@ -15,3 +15,10 @@ $ npm install
 ### Rodar o Aplicativo
   - run for Android `$ react-native run-android`
   - run for iOS  `$ react-native run-ios`
+
+### Rodar Emulador Andoird
+
+  - Se necessário, dar permissão ao usuário. $ sudo chown user-pc -R /dev/kvm
+  - Listar dispositivos virtuais $ ./emulator -list-avds 
+  - Rodar emulador $ ./emulator -avd $DEVICE_NAME
+
