@@ -29,6 +29,8 @@ Primeiro clone este repositório, e então rode o seguinte comando:
 ### Rodar Emulador Andoird
 
   - Se necessário, dar permissão ao usuário. $ sudo chown user-pc -R /dev/kvm
+  - Se tiver algum problema com o linux:
+  $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
   - Listar dispositivos virtuais $ ./emulator -list-avds 
   - Rodar emulador $ ./emulator -avd $DEVICE_NAME
 

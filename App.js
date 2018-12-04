@@ -1,19 +1,13 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
+import TextInputMask from 'react-native-text-input-mask';
 import { 
   StyleSheet, 
   Text, 
   TextInput, 
   TouchableOpacity,
   Alert,
-  View
+  View,
+  Keyboard
 }  from 'react-native';
 
 type Props = {};
@@ -25,9 +19,12 @@ export default class App extends Component<Props> {
     this.calcular = this.calcular.bind(this)
   }
 
+  
+
   calcular(){
 
     const regex_input = /^[0-9.]+$/
+    Keyboard.dismiss()
     
     if (this.state.massa && this.state.altura){
 
@@ -95,11 +92,11 @@ export default class App extends Component<Props> {
       <View style={styles.container}>
         <View style={styles.entradas}>
           <View style={styles.entrada}>
-            <TextInput placeholder="Massa" keyboardType="numeric" style={styles.input} onChangeText={(massa) => {this.setState({massa})}}/>
+            <TextInputMask placeholder="Massa" keyboardType="numeric" style={styles.input} mask={"[99].[99]"} onChangeText={(massa) => {this.setState({massa})}}/>
             <Text style={styles.inputText}>Kg</Text>
           </View>
           <View style={styles.entrada}>
-            <TextInput placeholder="Altura" keyboardType="numeric" style={styles.input} onChangeText={(altura) => {this.setState({altura})}}/>
+            <TextInputMask placeholder="Altura" keyboardType="numeric" style={styles.input} mask={"[9].[99]"} onChangeText={(altura) => {this.setState({altura})}}/>
             <Text style={styles.inputText}>M</Text>
           </View>
         </View>
