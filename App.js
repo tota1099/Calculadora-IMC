@@ -17,9 +17,7 @@ export default class App extends Component<Props> {
     super(props)
     this.state = { altura:0, massa:0, resultado:0, resultadoText: "" },
     this.calcular = this.calcular.bind(this)
-  }
-
-  
+  }  
 
   calcular(){
 
@@ -92,7 +90,7 @@ export default class App extends Component<Props> {
       <View style={styles.container}>
         <View style={styles.entradas}>
           <View style={styles.entrada}>
-            <TextInputMask placeholder="Massa" keyboardType="numeric" style={styles.input} mask={"[99].[99]"} onChangeText={(massa) => {this.setState({massa})}}/>
+            <TextInputMask placeholder="Massa" keyboardType="numeric" style={styles.input} mask={"[099].[99]"} onChangeText={(massa) => {this.setState({massa})}}/>
             <Text style={styles.inputText}>Kg</Text>
           </View>
           <View style={styles.entrada}>
