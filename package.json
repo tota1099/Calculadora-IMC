@@ -10,7 +10,7 @@
     "bundle": "^2.1.0",
     "react": "16.6.0-alpha.8af6728",
     "react-native": "^0.57.7",
-    "react-native-text-input-mask": "^0.8.0"
+    "react-native-text-input-mask": "^1.0.6"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
